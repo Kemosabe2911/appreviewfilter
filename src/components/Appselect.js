@@ -19,8 +19,7 @@ const Appselect = ({ apps, appselected, handleAppselected}) => {
     //console.log(appIDs);
     return (
         <form>
-            <select defaultValue={appselected} onChange={handleAppselected}>
-                <option value='NONE'>-</option>
+            <select defaultValue={appselected} onChange={handleAppselected} placeholder={<div>Select An App</div>}>
                 {uniqueappIDs.map(app =>(
                     <option key={app} value={app}>{app}</option>
                 ))}
