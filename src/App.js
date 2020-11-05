@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   //console.log(review[0].appID);
-  console.log(review);
+  //console.log(review);
   const [result,setResult] = useState([]);
 
   return (
