@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Select from "react-select";
 import review from './data/review.json';
-//import Appselect from './components/Appselect';
+import Appselect from './components/Appselect';
 import './App.css';
 
 function App() {
@@ -9,12 +8,6 @@ function App() {
   //console.log(review);
   const [result,setResult] = useState([]);
   const [appselected, setAppselected] = useState(null);
-
-  const appIDs=[];
-    
-    {review.map(app =>(
-        appIDs.push(app.appID)
-    ))}
 
   const handleAppselected = (e) =>{
     console.log(appselected);
