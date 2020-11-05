@@ -5,11 +5,13 @@ import './App.css';
 
 function App() {
   //console.log(review[0].appID);
-  //console.log(review);
+  //console.log(review); 
   const [result,setResult] = useState([]);
   const [appselected, setAppselected] = useState(null);
 
   const handleAppselected = (e) =>{
+    e.preventDefault();
+    console.log(e.target.value);
     setAppselected(e.target.value);
     console.log(appselected);
   }

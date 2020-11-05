@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Appselect = ({ apps, appselected, handleAppselected}) => {
     const appIDs=[];
@@ -20,7 +20,7 @@ const Appselect = ({ apps, appselected, handleAppselected}) => {
     return (
         <form>
             <select defaultValue={appselected} onChange={handleAppselected} placeholder={<div>Select An App</div>}>
-                <option value={null}>NONE</option>
+                <option value={null}>-</option>
                 {uniqueappIDs.map(app =>(
                     <option key={app} value={app}>{app}</option>
                 ))}
