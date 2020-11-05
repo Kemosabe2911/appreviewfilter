@@ -10,8 +10,8 @@ function App() {
   const [appselected, setAppselected] = useState(null);
 
   const handleAppselected = (e) =>{
-    console.log(appselected);
     setAppselected(e.target.value);
+    console.log(appselected);
   }
 
   return (
