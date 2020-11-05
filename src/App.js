@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import review from './data/review.json';
+import Appselect from './components/Appselect';
 import './App.css';
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
 
   return (
       <div className="container">
-
+        <div className="top-container">
+          <Appselect apps={review} />
+        </div>
       </div>
   );
 }
