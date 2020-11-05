@@ -9,13 +9,14 @@ function App() {
   const [result,setResult] = useState([]);
   const [appselected, setAppselected] = useState(null);
 
-  const handleAppselected = (e) =>{
-    e.preventDefault();
-    console.log(e.target.value);
-    setAppselected(e.target.value);
+    const handleAppselected = (e) =>{
+      e.preventDefault();
+        //console.log(e.target.value);
+        setAppselected(e.target.value);
+        //console.log(appselected);
+    }
+  
     console.log(appselected);
-  }
-
   return (
       <div className="container">
         <div className="top-container">
