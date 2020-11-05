@@ -13,8 +13,8 @@ const Appselect = ({ apps }) => {
     //console.log(appIDs);
     return (
         <select>
-            {apps.map(app =>(
-                <option key={app.id} value={app.appID}>{app.appID}</option>
+            {uniqueappIDs.map(app =>(
+                <option key={app} value={app}>{app}</option>
             ))}
         </select>
     )
