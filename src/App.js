@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import review from './data/review.json';
 import Appselect from './components/Appselect';
+import result from './components/result';
 import './App.css';
 
 function App() {
@@ -21,6 +22,12 @@ function App() {
       <div className="container">
         <div className="top-container">
           <Appselect apps={review} appselected={appselected} handleAppselected={handleAppselected} />
+        </div>
+        <div className="left-container">
+
+        </div>
+        <div className="right-container">
+          <result appselected={appselected} />
         </div>
       </div>
   );
