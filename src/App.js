@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import review from './data/review.json';
 import Appselect from './components/Appselect';
-import result from './components/result';
+import DisplayApp from './components/result';
 import './App.css';
 
 function App() {
   //console.log(review[0].appID);
   //console.log(review); 
-  const [result,setResult] = useState([]);
+  //const [result,setResult] = useState([]);
   const [appselected, setAppselected] = useState(null);
 
     const handleAppselected = (e) =>{
@@ -27,7 +27,7 @@ function App() {
 
         </div>
         <div className="right-container">
-          <result appselected={appselected} />
+          <DisplayApp appselected={appselected} />
         </div>
       </div>
   );

@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import review from '../data/review.json';
 
-const result = () => {
+const result = ({ appselected }) => {
+    const results= review.filter( app => app.appID === appselected);
+    console.log(results);
     return (
-        <div>
+        <div className="result">
             
         </div>
     )
