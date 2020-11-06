@@ -6,7 +6,17 @@ const result = ({ appselected }) => {
     console.log(results);
     return (
         <div className="result">
-            
+            {results.map( data =>(
+            <div>
+                <h3>{data.id}</h3>
+                <ul>
+                    <li>{data.id}</li>
+                    <li>{data.appID}</li>
+                    <li>{data.appStoreName}</li>
+                    <li>{data.rating}</li>
+                </ul>
+            </div>    
+            ))}
         </div>
     )
 }
