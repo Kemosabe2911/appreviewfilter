@@ -26,7 +26,7 @@ function App() {
     }
 
     console.log(appselected);
-    console.log(timeorder);
+    //console.log(timeorder);
   return (
       <div className="container">
         <div className="top-container">
