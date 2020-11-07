@@ -19,26 +19,22 @@ function App() {
         //console.log(appselected);
     }
     
+    console.log(result);
     const handleTimeorder = (e) =>{
       e.preventDefault();
         //console.log(e.target.value);
         setTimeorder(e.target.value);
         if(e.target.value === 'newest'){
-          setResult(result.sort((a, b) => b.reviewDate - a.reviewDate));
-          //console.log(sortedActivities);
+          setResult(result.sort((a, b) => b.reviewDate < a.reviewDate));
+          console.log(result);
         }
         if(e.target.value === 'oldest'){
-          setResult(result.sort((a, b) => a.reviewDate - b.reviewDate));
-            //console.log(sortedActivities);
+          setResult(result.sort((a, b) => a.reviewDate < b.reviewDate));
+          console.log(result);
         }
         //console.log(appselected);
     }
-
-    
-    console.log(result);
     console.log(timeorder);
-    
-
     console.log(appselected);
     //console.log(timeorder);
   return (

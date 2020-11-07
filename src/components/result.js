@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import review from '../data/review.json';
+import React from 'react';
 
 const result = ({ result }) => {
     /*
@@ -27,6 +26,7 @@ const result = ({ result }) => {
                     <li>{data.appID}</li>
                     <li>{data.appStoreName}</li>
                     <li>{data.rating}</li>
+                    <li>{data.reviewDate}</li>
                 </ul>
             </div>    
             ))}
