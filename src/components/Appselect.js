@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Appselect = ({ apps, appselected, handleAppselected}) => {
+const Appselect = ({ apps, appselected, timeorder, handleAppselected, handleTimeorder}) => {
     const appIDs=[];
     //const [appselected, setAppselected] = useState();
     
@@ -24,6 +24,10 @@ const Appselect = ({ apps, appselected, handleAppselected}) => {
                 {uniqueappIDs.map(app =>(
                     <option key={app} value={app}>{app}</option>
                 ))}
+            </select>
+            <select defaultValue={timeorder} onChange={handleTimeorder} >
+                <option value="newest">newest</option>
+                <option value="oldest">oldest</option>
             </select>
         </form>
     )
