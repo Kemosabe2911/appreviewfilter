@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   //console.log(review[0].appID);
   //console.log(review); 
-  //const [result,setResult] = useState([]);
+  const [result,setResult] = useState(review);
   const [appselected, setAppselected] = useState(null);
   const [timeorder, setTimeorder]= useState('newest');
 
@@ -15,6 +15,7 @@ function App() {
       e.preventDefault();
         //console.log(e.target.value);
         setAppselected(e.target.value);
+        setResult(review.filter( app => app.appID === e.target.value));
         //console.log(appselected);
     }
     
@@ -22,8 +23,21 @@ function App() {
       e.preventDefault();
         //console.log(e.target.value);
         setTimeorder(e.target.value);
+        if(e.target.value === 'newest'){
+          setResult(result.sort((a, b) => b.reviewDate - a.reviewDate));
+          //console.log(sortedActivities);
+        }
+        if(e.target.value === 'oldest'){
+          setResult(result.sort((a, b) => a.reviewDate - b.reviewDate));
+            //console.log(sortedActivities);
+        }
         //console.log(appselected);
     }
+
+    
+    console.log(result);
+    console.log(timeorder);
+    
 
     console.log(appselected);
     //console.log(timeorder);
@@ -40,7 +54,7 @@ function App() {
 
         </div>
         <div className="right-container">
-          <DisplayApp appselected={appselected} timeorder={timeorder} />
+          <DisplayApp result={result} />
         </div>
       </div>
   );
