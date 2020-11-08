@@ -19,13 +19,13 @@ const Appselect = ({ apps, appselected, timeorder, handleAppselected, handleTime
     //console.log(appIDs);
     return (
         <form>
-            <select defaultValue={appselected} onChange={handleAppselected} placeholder={<div>Select An App</div>}>
+            <select className="app-select" defaultValue={appselected} onChange={handleAppselected} placeholder={<div>Select An App</div>}>
                 <option disabled={false} value="">-</option>
                 {uniqueappIDs.map(app =>(
                     <option key={app} value={app}>{app}</option>
                 ))}
             </select>
-            <select defaultValue={timeorder} onChange={handleTimeorder} >
+            <select className="time-select" defaultValue={timeorder} onChange={handleTimeorder} >
                 <option value="newest">newest</option>
                 <option value="oldest">oldest</option>
             </select>

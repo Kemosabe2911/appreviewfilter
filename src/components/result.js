@@ -22,7 +22,6 @@ const result = ({ result }) => {
             <div>
                 <h3>{data.id}</h3>
                 <ul>
-                    <li>{data.id}</li>
                     <li>{data.appID}</li>
                     <li>{data.appStoreName}</li>
                     <li>{data.rating}</li>
