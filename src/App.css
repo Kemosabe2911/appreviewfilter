@@ -6,16 +6,20 @@
 .top-container{
   width: 100vw;
   height: 10vh;
-  display: flex;
   align-items: center;
+  border-bottom: 1px solid #000000;
 }
 
-.top-container .app-select{
-  margin: 0px 10px;
-  flex: 5;
+.app-select{
+  margin: 3vh;
+  float: left;
+  width: 200px;
+  height: 30px;
 }
 
-.top-container .time-select{
-  margin: 0px 10px;
-  flex: 1;
+.time-select{
+  margin: 3vh 5vh;
+  height: 30px;
+  width: 100px;
+  float: right;
 }
