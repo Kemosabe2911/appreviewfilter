@@ -3,11 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  overflow: hidden;
+}
+
 .top-container{
   width: 100vw;
   height: 10vh;
   align-items: center;
+  background: #ffffff;
+  z-index: 1000;
   border-bottom: 1px solid #000000;
+  position: sticky;
+  top: 0;
 }
 
 .app-select{
@@ -33,11 +42,20 @@
 .left-container{
   width: 20vw;
   height: 100%;
-  background: #000000;
 }
 
 .right-container{
   border-left: 1px solid #000000;
-  width: 90vw;
+  width: 80vw;
   padding: 20px 30px;
+}
+.scrollbar
+{
+	margin-left: 2px;
+	float: left;
+	height: 750px;
+  width: 100%;
+	background: #ffffff;
+	overflow-y: scroll;
+	margin-bottom: 25px;
 }

@@ -48,9 +48,9 @@ function App() {
         </div>
         <div className="output-container">
           <div className="left-container">
-
+            Hello
           </div>
-          <div className="right-container">
+          <div className="right-container scrollbar">
             <DisplayApp result={result} />
           </div>
         </div>
