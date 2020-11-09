@@ -46,11 +46,13 @@ function App() {
           handleAppselected={handleAppselected} 
           handleTimeorder={handleTimeorder}/>
         </div>
-        <div className="left-container">
+        <div className="output-container">
+          <div className="left-container">
 
-        </div>
-        <div className="right-container">
-          <DisplayApp result={result} />
+          </div>
+          <div className="right-container">
+            <DisplayApp result={result} />
+          </div>
         </div>
       </div>
   );
