@@ -40,13 +40,13 @@ body{
 }
 
 .left-container{
-  width: 20vw;
+  width: 25vw;
   height: 100%;
 }
 
 .right-container{
   border-left: 1px solid #cccccc;
-  width: 80vw;
+  width: 75vw;
   padding: 20px 30px;
 }
 .scrollbar
