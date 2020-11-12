@@ -157,9 +157,10 @@ display: none;
   padding: 10px;
   width: 80%;
   margin: auto;
+  margin: 5px;
   display: flex;
   flex-direction: column;
-  
+  border: 1px solid #cccccc;
 }
 
 .res-container .line-1{
@@ -170,4 +171,16 @@ display: none;
 }
 .res-container .line-1 h4{
   flex: 3;
+}
+
+.res-container .line-2{
+  display: flex;
+  padding: 10px 20px;
+}
+
+.res-container .line-3{
+  display: flex;
+}
+.res-container .line-3 p{
+  padding: 10px 20px;
 }
