@@ -21,7 +21,7 @@ const result = ({ result }) => {
             {result.map( data =>(
             <div className="res-container">
                 <div className="line-1">
-                    <h3>{data.appStoreName}</h3>
+                    <h3 className="store-name">{data.appStoreName}</h3>
                     <h3>{data.reviewHeading}</h3>
                     <h4>{data.rating}</h4>
                 </div>

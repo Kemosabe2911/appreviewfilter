@@ -14,7 +14,7 @@ body{
   align-items: center;
   background: #ffffff;
   z-index: 1000;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #cccccc;
   position: sticky;
   top: 0;
 }
@@ -45,7 +45,7 @@ body{
 }
 
 .right-container{
-  border-left: 1px solid #000000;
+  border-left: 1px solid #cccccc;
   width: 80vw;
   padding: 20px 30px;
 }
@@ -168,10 +168,7 @@ display: none;
   display: flex;
 }
 .res-container .line-1 h3{
-  flex: 1;
-}
-.res-container .line-1 h4{
-  flex: 3;
+  margin: 0px 10px;
 }
 
 .res-container .line-2{
@@ -184,4 +181,9 @@ display: none;
 }
 .res-container .line-3 p{
   padding: 10px 20px;
+}
+.res-container .line-1 .store-name{
+  padding: 3px;
+  background: #cccccc;
+  border-radius: 5px;
 }
