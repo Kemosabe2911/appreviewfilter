@@ -20,14 +20,20 @@ const result = ({ result }) => {
         <div className="result">
             {result.map( data =>(
             <div className="res-container">
+                <div className="line-1">
                     <h3>{data.appStoreName}</h3>
-                    <li>{data.rating}</li>
-                    <li>{data.reviewDate}</li>
-                    <li>{data.reviewText}</li>
-                    <li>by {data.reviewUserName}</li>
-                    <li>{data.countryName}</li>
-                    <li>{data.rating}</li>
-                    <li>{data.version}</li>
+                    <h4>{data.rating}</h4>
+                    <h3>{data.reviewHeading}</h3>
+                </div>
+                <div className="line-2">
+                    <p>{data.reviewText}</p>
+                </div>
+                <div className="line-3">
+                    <p>by {data.reviewUserName}</p>
+                    <p>{data.reviewDate}</p>
+                    <p>{data.countryName}</p>
+                    <p>{data.version}</p>
+                </div>
             </div>    
             ))}
         </div>
