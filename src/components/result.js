@@ -22,8 +22,8 @@ const result = ({ result }) => {
             <div className="res-container">
                 <div className="line-1">
                     <h3>{data.appStoreName}</h3>
-                    <h4>{data.rating}</h4>
                     <h3>{data.reviewHeading}</h3>
+                    <h4>{data.rating}</h4>
                 </div>
                 <div className="line-2">
                     <p>{data.reviewText}</p>
