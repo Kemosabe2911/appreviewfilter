@@ -144,3 +144,18 @@ display: none;
   -ms-word-break: normal;
   word-break: normal;
 }
+
+.result{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.res-container{
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+}

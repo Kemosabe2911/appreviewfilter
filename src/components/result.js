@@ -20,8 +20,7 @@ const result = ({ result }) => {
         <div className="result">
             {result.map( data =>(
             <div className="res-container">
-                <ul>
-                    <li>{data.appStoreName}</li>
+                    <h3>{data.appStoreName}</h3>
                     <li>{data.rating}</li>
                     <li>{data.reviewDate}</li>
                     <li>{data.reviewText}</li>
@@ -29,7 +28,6 @@ const result = ({ result }) => {
                     <li>{data.countryName}</li>
                     <li>{data.rating}</li>
                     <li>{data.version}</li>
-                </ul>
             </div>    
             ))}
         </div>
