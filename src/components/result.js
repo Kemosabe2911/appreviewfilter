@@ -19,13 +19,16 @@ const result = ({ result }) => {
     return (
         <div className="result">
             {result.map( data =>(
-            <div>
-                <h3>{data.id}</h3>
+            <div className="res-container">
                 <ul>
-                    <li>{data.appID}</li>
                     <li>{data.appStoreName}</li>
                     <li>{data.rating}</li>
                     <li>{data.reviewDate}</li>
+                    <li>{data.reviewText}</li>
+                    <li>by {data.reviewUserName}</li>
+                    <li>{data.countryName}</li>
+                    <li>{data.rating}</li>
+                    <li>{data.version}</li>
                 </ul>
             </div>    
             ))}
