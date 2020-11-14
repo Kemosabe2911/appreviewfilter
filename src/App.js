@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import review from './data/review.json';
 import Appselect from './components/Appselect';
+import Pagination from './components/Pagination';
 import DisplayApp from './components/result';
 import './App.css';
 
@@ -11,7 +12,7 @@ function App() {
   const [appselected, setAppselected] = useState(null);
   const [timeorder, setTimeorder]= useState('newest');
   const [currentPage, setCurrentPage]= useState(1);
-  const [postsPerPage, setPostsPerPage]= useState(10);
+  const [postsPerPage, setPostsPerPage]= useState(20);
 
     const handleAppselected = (e) =>{
       e.preventDefault();
@@ -44,6 +45,8 @@ function App() {
     const indexofFirstPost = indexofLastPost - postsPerPage;
     const currentResults= result.slice(indexofFirstPost,indexofLastPost);
 
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
     //console.log(timeorder);
   return (
@@ -60,7 +63,8 @@ function App() {
             Hello
           </div>
           <div className="right-container scrollbar">
-            <DisplayApp result={result} />
+            <Pagination postsPerPage={postsPerPage} totalPosts={result.length} paginate={paginate} />
+            <DisplayApp result={currentResults} />
           </div>
         </div>
       </div>
