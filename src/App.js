@@ -45,7 +45,6 @@ function App() {
     const currentResults= result.slice(indexofFirstPost,indexofLastPost);
 
 
-
     //console.log(timeorder);
   return (
       <div className="container">
