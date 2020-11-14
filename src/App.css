@@ -201,16 +201,18 @@ display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 25px 0px 100px 0px;
+  margin: 25px 0px 125px 0px;
 }
 
 .pagination a{
   padding: 2px 5px;
-  margin: 1px;
+  margin: 2px;
   text-decoration: none;
   color: #333;
   border: 1px solid #333333;
 }
 .pagination a:hover{
-  color: #999;
+  color: #ffffff;
+  background: #892cdc;
+  border-color: #892cdc;
 }
