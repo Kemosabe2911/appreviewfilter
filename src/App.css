@@ -201,6 +201,7 @@ display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 25px 0px 100px 0px;
 }
 
 .pagination a{

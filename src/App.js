@@ -63,8 +63,8 @@ function App() {
             Hello
           </div>
           <div className="right-container scrollbar">
-            <Pagination postsPerPage={postsPerPage} totalPosts={result.length} paginate={paginate} />
             <DisplayApp result={currentResults} />
+            <Pagination postsPerPage={postsPerPage} totalPosts={result.length} paginate={paginate} />
           </div>
         </div>
       </div>
