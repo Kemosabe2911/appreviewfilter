@@ -10,6 +10,8 @@ function App() {
   const [result,setResult] = useState(review);
   const [appselected, setAppselected] = useState(null);
   const [timeorder, setTimeorder]= useState('newest');
+  const [currentPage, setCurrentPage]= useState(1);
+  const [postsPerPage, setPostsPerPage]= useState(10);
 
     const handleAppselected = (e) =>{
       e.preventDefault();
@@ -36,6 +38,14 @@ function App() {
     }
     console.log(timeorder);
     console.log(appselected);
+
+    //get current posts
+    const indexofLastPost = currentPage * postsPerPage;
+    const indexofFirstPost = indexofLastPost - postsPerPage;
+    const currentResults= result.slice(indexofFirstPost,indexofLastPost);
+
+
+
     //console.log(timeorder);
   return (
       <div className="container">
