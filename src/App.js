@@ -56,7 +56,7 @@ function App() {
     }
 
     React.useEffect(() => {
-      const results = result.filter(data =>
+      const results = review.filter(data =>
         data.reviewHeading.toLowerCase().includes(searchTerm)
       );
       setResult(results);
