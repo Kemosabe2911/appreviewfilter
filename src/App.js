@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import review from './data/review.json';
 import Appselect from './components/Appselect';
 import Pagination from './components/Pagination';
@@ -14,6 +14,7 @@ function App() {
   const [timeorder, setTimeorder]= useState('newest');
   const [currentPage, setCurrentPage]= useState(1);
   const [postsPerPage, setPostsPerPage]= useState(20);
+  const [searchTerm, setSearchTerm] = useState('');
 
     const handleAppselected = (e) =>{
       e.preventDefault();
@@ -51,11 +52,15 @@ function App() {
     //Search Filter
     const searchResult = (e) =>{
       e.preventDefault();
-      const searchout = result.filter( data => 
-        data.reviewHeading.toString().toLowerCase().includes(e.target.value.toString().toLowerCase()
-        ));
-      setResult(searchout);
+      setSearchTerm(e.target.value);
     }
+
+    React.useEffect(() => {
+      const results = result.filter(data =>
+        data.reviewHeading.toLowerCase().includes(searchTerm)
+      );
+      setResult(results);
+    }, [searchTerm]);
 
 
     //console.log(timeorder);
