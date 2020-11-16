@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import review from './data/review.json';
 import Appselect from './components/Appselect';
 import Pagination from './components/Pagination';
+import SearchApp from './components/SearchApp';
 import DisplayApp from './components/result';
 import './App.css';
 
@@ -49,7 +50,11 @@ function App() {
 
     //Search Filter
     const searchResult = (e) =>{
-      
+      e.preventDefault();
+      const searchout = result.filter( data => 
+        data.reviewHeading.toString().toLowerCase().includes(e.target.value.toString().toLowerCase()
+        ));
+      setResult(searchout);
     }
 
 
@@ -65,7 +70,7 @@ function App() {
         </div>
         <div className="output-container">
           <div className="left-container">
-            Hello
+            <SearchApp searchResult={searchResult} />
           </div>
           <div className="right-container scrollbar">
             <DisplayApp result={currentResults} />
