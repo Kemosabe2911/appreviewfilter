@@ -24,7 +24,7 @@ const result = ({ result }) => {
                     <span className="box"></span>
                     <h3 className="store-name">{data.appStoreName}</h3>
                     <h3>{data.reviewHeading}</h3>
-                    <h4>{data.rating}</h4>
+                    <h4>{data.rating}<i class="fas fa-star"></i></h4>
                 </div>
                 <div className="line-2">
                     <p>{data.reviewText}</p>
