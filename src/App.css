@@ -42,6 +42,7 @@ body{
 .left-container{
   width: 25vw;
   height: 100%;
+  padding: 20px;
 }
 
 .right-container{
@@ -215,4 +216,14 @@ display: none;
   color: #ffffff;
   background: #892cdc;
   border-color: #892cdc;
+}
+
+.search-box{
+  padding: 20px 50px;
+  width: 80%;
+}
+
+.left-container form .srh{
+  width: 90%;
+  padding: 10px;
 }
