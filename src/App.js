@@ -15,7 +15,7 @@ function App() {
   const [currentPage, setCurrentPage]= useState(1);
   const [postsPerPage, setPostsPerPage]= useState(20);
   const [searchTerm, setSearchTerm] = useState('');
-
+  const [searchData, setSearchdata] = useState(review);
     const handleAppselected = (e) =>{
       e.preventDefault();
         //console.log(e.target.value);
@@ -37,6 +37,7 @@ function App() {
           setResult(result.sort((a, b) => a.reviewDate < b.reviewDate));
           console.log(result);
         }
+        setSearchdata(result);
         //console.log(appselected);
     }
     console.log(timeorder);
@@ -52,6 +53,7 @@ function App() {
     //Search Filter
     const searchResult = (e) =>{
       e.preventDefault();
+      setResult(searchData);
       setSearchTerm(e.target.value);
     }
 
